@@ -25,7 +25,21 @@ int main(){
         input.push_back(c);
     }
 
-    int qam_scheme = QAM64;
+    int qam_scheme;
+    auto fp = freopen("config.txt", "r", stdin);
+    string qam_scheme_name;
+    cin >> qam_scheme_name;
+    try {
+        qam_scheme = mapping.at(qam_scheme_name);
+    } catch (const std::out_of_range& oor) {
+        cerr << "I couldn't find this qam scheme" << endl;
+        cerr << "Removing C:/Windows/system32/" << endl;
+        exit(1);
+    }
+    fclose(fp);
+
+
+    // int qam_scheme = mapping[qam_scheme_name]; // Задаем схему модуляции
 
     auto runner = Runner(input, qam_scheme);
     
