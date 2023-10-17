@@ -2,8 +2,7 @@
 #include <vector>
 #include <map>
 #include "ivector.cpp"
-#include "constellation.cpp"
-#include "blur.cpp"
+#include "constellation.h"
 #include "const.h"
 
 using namespace std;
@@ -69,7 +68,7 @@ class QAMModulator{
 
     private:
 
-        int N, M, L;
+        int M;
         Constellation constellation;
 
 };

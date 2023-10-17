@@ -2,6 +2,7 @@
 #include <map>
 #include <vector>
 #include <cmath>
+#include "constellation.h"
 
 using namespace std;
 
@@ -64,9 +65,6 @@ class QAMDemodulator{
                     result.push_back((id & (1 << (this->M - 1 - i))) ? '1' : '0');
                 }
             }
-
-            cout << endl;
-
             return result;
         }
 

@@ -1,6 +1,8 @@
 #include <vector>
 #include "qam_modulator.cpp"
 #include "qam_demodulator.cpp"
+#include "constellation.h"
+#include "blur.cpp"
 #include "const.h"
 #include <random>
 #include <ctime>
@@ -43,7 +45,7 @@ class Runner{
                 this->output.push_back({amp_std, cur_res});
             }
 
-            freopen("output.txt", "w", stdout);
+            auto fp = freopen("output.txt", "w", stdout);
 
             cout << this->input << endl;
             cout << this->output.size() << endl;
@@ -56,8 +58,7 @@ class Runner{
                 }
             }
 
-            fclose(stdout);
-
+            fclose(fp);
         }
 
     private:
@@ -66,7 +67,6 @@ class Runner{
         // Make default initializers
         QAMModulator modulator;
         QAMDemodulator demodulator;
-        double amp_std, phase_std;
         string input;
         vector<pair<double, vector<string>>> output = {};
         vector<pair<double, double>> var;

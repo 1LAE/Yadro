@@ -16,8 +16,6 @@ int main(){
     cout.tie(0);
 
     
-    bitset<SETSIZE> bits;
-
     srand(time(0));
 
     string input;
