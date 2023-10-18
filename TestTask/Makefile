@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -std=c++17
 
 # Исходные файлы и цели сборки
 SRCDIR = .
-SRCFILES = main.cpp runner.cpp qam_modulator.cpp qam_demodulator.cpp blur.cpp 
+SRCFILES = main.cpp 
 OBJS = $(SRCFILES:.cpp=.o)
 EXECUTABLE = test_task
 

@@ -1,3 +1,6 @@
+#ifndef QAM_MODULATOR_H
+#define QAM_MODULATOR_H
+
 #include <iostream>
 #include <vector>
 #include <map>
@@ -71,3 +74,5 @@ class QAMModulator{
         Constellation constellation;
 
 };
+
+#endif

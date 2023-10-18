@@ -3,7 +3,7 @@
 #include <random>
 #include <ctime>
 #include "const.h"
-#include "runner.cpp"
+#include "runner.h"
 
 
 using namespace std;

@@ -1,3 +1,6 @@
+#ifndef BLUR_H
+#define BLUR_H
+
 #include <vector>
 #include <map>
 #include <random>
@@ -49,3 +52,5 @@ class HaussianBlur{
 
 
 };
+
+#endif

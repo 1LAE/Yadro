@@ -1,8 +1,11 @@
+#ifndef RUNNER_H
+#define RUNNER_H
+
 #include <vector>
-#include "qam_modulator.cpp"
-#include "qam_demodulator.cpp"
+#include "qam_modulator.h"
+#include "qam_demodulator.h"
 #include "constellation.h"
-#include "blur.cpp"
+#include "blur.h"
 #include "const.h"
 #include <random>
 #include <ctime>
@@ -73,3 +76,5 @@ class Runner{
 
 
 };
+
+#endif

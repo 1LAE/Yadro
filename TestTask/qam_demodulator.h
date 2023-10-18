@@ -1,3 +1,6 @@
+#ifndef QAM_DEMODULATOR_H
+#define QAM_DEMODULATOR_H
+
 #include <iostream>
 #include <map>
 #include <vector>
@@ -75,3 +78,5 @@ class QAMDemodulator{
 
 
 };
+
+#endif
