@@ -25,19 +25,20 @@ class Runner{
         void run(vector<pair<double, double>> var){
 
             this->var = var;
+            auto result = this->modulator.transmit(this->input);
 
             for(auto at: var){
                 double amp_std = at.first;
                 double phase_std = at.second;
 
                 auto noiser = HaussianBlur({0, 0}, {amp_std, phase_std});
+                
 
                 vector<string> cur_res;
 
                 // работает долго, зато объемная выборка
                 for(int p = 0; p < 1000; p++){
 
-                    auto result = this->modulator.transmit(this->input);
                     auto noised = noiser.get_blur(result);
 
                     string out = this->demodulator.receive(noised);

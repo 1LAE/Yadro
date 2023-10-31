@@ -47,4 +47,6 @@ plt.ylabel('error per bit')
 plt.title('График зависимости вероятности ошибки от дисперсии шума')
 plt.grid(True)
 
+plt.savefig('QAM64.png')
+
 plt.show()

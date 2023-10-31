@@ -59,12 +59,11 @@ class QAMModulator{
                 
                 if(cur == this->M){
                     cur = 0;
-
                     res.push_back(constellation.get_ampliphase(id));
                     id = 0;
                 }
             }
-
+            
             return res;
         }
 

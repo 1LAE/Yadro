@@ -58,14 +58,17 @@ class QAMDemodulator{
                     double dist = pow(amplitude - cur.first, 2) + 
                                     pow(phase - cur.second, 2);
 
-                    if(dist < mindist){
+                    if(dist <= mindist){
                         id = _id;
                         mindist = dist;
                     }
                 }
-                
-                for(int i = 0; i < this->M; i++){
-                    result.push_back((id & (1 << (this->M - 1 - i))) ? '1' : '0');
+
+                bitset<32> binary(id);
+                string binaryString = binary.to_string().substr(32 - M);
+
+                for(auto at: binaryString){
+                    result.push_back(at);
                 }
             }
             return result;

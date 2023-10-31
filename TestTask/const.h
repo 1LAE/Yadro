@@ -2,6 +2,7 @@
 #define CONST_H
 
 #define SETSIZE 1024
+
 #define QPSK 2
 
 // Почему-то на qam16 при нулевой дисперсии шума выдает искажения :(

@@ -30,10 +30,9 @@ class Constellation{
 
             int dimentions = 1 << (M / 2); // sqrt(2^M)
             vector<int> dxy;
-            for(int i = 0; i < dimentions / 2; i++){
+            for(int i = 0; i < dimentions / 2; i++){  // -1 1 3 -3
                 dxy.push_back(-(1 + 2 * i));
                 dxy.push_back(1 + 2 * i);
-
             }
 
             int T = 0;
@@ -46,7 +45,7 @@ class Constellation{
                     constellation_id[{dxy[i], dxy[j]}] = T++;
 
                     // амплитуду я не нормировал, но это не принципиально
-                    double amplitude = sqrt(dxy[i] * dxy[i] +dxy[j] * dxy[j]) * CONST;
+                    double amplitude = sqrt(dxy[i] * dxy[i] + dxy[j] * dxy[j]) * CONST;
                     double phase = atan2(dxy[j], dxy[i]);
                     if(phase < 0){
                         phase += 2 * M_PI;
@@ -62,7 +61,7 @@ class Constellation{
 
         pair<double, double> get_ampliphase(int id){
             if(id >= constellation_values.size()){
-                cout << "id " << id << " is too big" << endl;
+                cerr << "id " << id << " is too big" << endl;
             }
             return constellation_values[id]; 
         }

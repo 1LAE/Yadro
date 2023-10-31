@@ -58,8 +58,6 @@ int main(){
     }
 
     runner.run(var);
-    
-
 
     cout << "DONE" << endl;
     return 0;
