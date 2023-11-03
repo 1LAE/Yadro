@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <bitset>
+#include <string>
 #include "constellation.h"
 #include "const.h"
 

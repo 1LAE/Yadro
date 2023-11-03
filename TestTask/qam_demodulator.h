@@ -5,6 +5,8 @@
 #include <map>
 #include <vector>
 #include <cmath>
+#include <bitset>
+#include <string>
 #include "constellation.h"
 
 using namespace std;
