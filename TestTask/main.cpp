@@ -51,6 +51,7 @@ int main(){
     
     vector<pair<double, double>> var;
 
+
     for(int i = 0; i < 10; i++){
         double amp_std = 0.1 * i;
         double phase_std = 0.1 * i;

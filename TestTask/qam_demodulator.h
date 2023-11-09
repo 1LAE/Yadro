@@ -43,7 +43,7 @@ class QAMDemodulator{
                 double phase = at.second;
 
                 int id = -1;
-                int mindist = 1e9;
+                double mindist = 1e9;
 
                 /*
                     Полный перебор в целом приемлем в рамках тестового задания (наверное :D), если мы не пытаемся в qam4096
@@ -54,11 +54,13 @@ class QAMDemodulator{
                         (таким даже олимпиадники редко балуются)
                 */
 
+
+            
                 for(int _id = 0; _id < (1 << this->M); _id++){
 
                     auto cur = this->constellation.get_ampliphase(_id);
-                    double dist = pow(amplitude - cur.first, 2) + 
-                                    pow(phase - cur.second, 2);
+                    double dist = (amplitude - cur.first) * (amplitude - cur.first) + 
+                                    (phase - cur.second) * (phase - cur.second);
 
                     if(dist <= mindist){
                         id = _id;

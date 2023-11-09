@@ -47,6 +47,9 @@ plt.ylabel('error per bit')
 plt.title('График зависимости вероятности ошибки от дисперсии шума')
 plt.grid(True)
 
-plt.savefig('QAM64.png')
+with open("config.txt") as f:
+    name = f.readline()
+    plt.savefig(name + '.png')
+
 
 plt.show()
