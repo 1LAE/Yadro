@@ -52,7 +52,7 @@ int main(){
     vector<pair<double, double>> var;
 
 
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < 50; i++){
         double amp_std = 0.1 * i;
         double phase_std = 0.1 * i;
         var.push_back({amp_std, phase_std});
